@@ -16,7 +16,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_04_12_083951) do
 
   create_table "user_balances", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.decimal "balance", precision: 15, scale: 2, default: "0.0"
+    t.bigint "balance", default: 0, null: false
     t.bigint "lock_version", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

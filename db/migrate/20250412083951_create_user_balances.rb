@@ -5,7 +5,6 @@ class CreateUserBalances < ActiveRecord::Migration[8.0]
     create_table :user_balances do |t|
       t.bigint :user_id, null: false
       t.bigint :balance, null: false, default: 0
-      t.bigint :lock_version, null: false, default: 0
 
       t.timestamps
     end
